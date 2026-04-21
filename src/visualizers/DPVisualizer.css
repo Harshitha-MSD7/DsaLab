@@ -1,0 +1,122 @@
+.dp-canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  width: 100%;
+  overflow: auto;
+}
+
+/* Fibonacci memo grid */
+.dp-memo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.dp-memo-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+  min-width: 72px;
+}
+
+.dp-memo-cell.active {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: var(--purple);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.4);
+  transform: scale(1.1);
+  animation: bounce-in 0.3s ease;
+}
+
+.dp-memo-key {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.dp-memo-val {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--text);
+}
+
+.dp-memo-cell.active .dp-memo-val {
+  color: var(--purple-light);
+}
+
+.dp-cache-badge {
+  padding: 8px 16px;
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--yellow);
+  animation: bounce-in 0.3s ease;
+}
+
+/* DP Table */
+.dp-table-wrap {
+  overflow: auto;
+  max-width: 100%;
+}
+
+.dp-table {
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.dp-table th,
+.dp-table td {
+  width: 40px; height: 36px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.dp-col-header,
+.dp-row-header {
+  background: var(--bg-3);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.dp-cell {
+  background: var(--surface-2);
+  color: var(--text-dim);
+  transition: all 0.25s ease;
+}
+
+.dp-cell.dp-filled {
+  background: rgba(6, 182, 212, 0.08);
+  color: var(--text);
+}
+
+.dp-cell.dp-active {
+  background: rgba(249, 115, 22, 0.2);
+  color: var(--orange-light);
+  border-color: var(--orange);
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
+}
+
+.dp-cell.dp-match {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--emerald);
+  border-color: var(--emerald);
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+  animation: bounce-in 0.3s ease;
+}

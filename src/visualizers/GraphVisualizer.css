@@ -1,0 +1,81 @@
+.graph-canvas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 12px;
+  gap: 12px;
+}
+
+.graph-svg {
+  width: 100%;
+  min-height: 280px;
+}
+
+:global(.graph-edge) {
+  transition: stroke 0.3s ease;
+}
+
+:global(.graph-node) {
+  transition: fill 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+:global(.graph-node-label) {
+  fill: #e2e8f0;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  pointer-events: none;
+}
+
+:global(.graph-edge-label) {
+  fill: #9ca3af;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+:global(.graph-dist-label) {
+  fill: var(--yellow);
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.graph-path-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  background: rgba(6, 182, 212, 0.08);
+  border-radius: 8px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.graph-path-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.graph-path-node {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan-light);
+  font-family: var(--font-mono);
+}
+
+.graph-arrow {
+  color: var(--text-dim);
+  font-weight: 400;
+  margin: 0 2px;
+}
+
+.graph-legend {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
